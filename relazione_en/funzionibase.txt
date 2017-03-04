@@ -1,0 +1,46 @@
+le operazioni permesse si trovano nel file mooves.m.
+per una corretta comprensione del package e' essenziale la completa comprensione di queste funzioni.
+
+TODO: parla di lispnil
+
+funzione : CS[]
+nome esteso: current stack
+descrizione: restituisce l'ultimo blocco della stack,
+return status: una lettera se la stack non e' vuota, altrimenti LispNil
+
+funzione: TB[]
+nome esteso: top correct block
+descrizione: ritorna l'ultima lettera nella posizione corretta nella stack
+esempio: MyStack = {l,a,u,n}; In: TB[] ; Out: a
+return status: una lettera oppure LispNil nel caso non ci sia nessuna lettera nella posizione corretta nella stack
+
+funzione: NN[]
+nome esteso: next needed
+descrizione: ritorna la prossima lettera necessaria al completamento della stack
+return status: una lettera oppure LispNil nel caso la stack sia completa e formata correttamente
+
+funzione: MTS[spam]
+nome esteso: move to the stack
+descrizione: sposta la lettera spam dal tavolo alla stack, se la lettera non e' presente sul tavolo non spostarla
+return status: sempre la lettera spam, anche se non viene spostata.
+
+funzione: MTT[spam]
+nome esteso: move to the table
+descrizione: sposta la lettera spam dalla stack al tavolo, se la lettera non e' presente non sulla stack non spostarla
+return status: sempre la lettera spam, anche se non viene spostata.
+
+funzione: NOT[expr]
+nome esteso: not
+descrizione: valuta expr e ritorna True se expr e' uguale a LispNil , altrimenti False
+return status: True o False
+
+funzione: EQ[expr1, expr2]
+nome esteso: equal
+descrizione: valuta prima expr1, poi expr2 e ritorna True e gli exitstatus sono uguali, altrimenti False
+returnstatus: True o False
+
+funzione: DU[work,test]
+nome esteso: do untill
+descrizione: valuta work finche' test non restituisce True
+returnstatus: LispNil se work viene eseguito piu' volte di maxdustep, altrimenti Null
+

@@ -1,0 +1,49 @@
+introduzione generica su algoritmi genetici.
+
+modellizzazione del problema.
+
+implementazione e peculiarita:
+	-funzioni base:
+		@ return status
+
+	-meccanismo di generazione:
+		@ ricorsivita'
+		@ limiti foglie
+		@ problema generazione individui corretti:
+			* liste di compatibilita'
+			* dut duw
+
+	-meccanismo di valutazione:
+		@ regole di sostituzione ritardate
+		@ broken du, max step
+
+	-meccanismo di crossover:
+		@ spiegazione albero espressioni
+		@ comandi Level, Position e Extract:
+			* punto di taglio totalmente casuale: uso di Level[ind, Infinity]
+		@ << dai un occhio ai sorgenti >>
+		@ Part Replace e simili
+		
+	-struttura modulare della fitness
+		@ punteggi
+		@ MAXDU MAXSTEP
+
+ottimizzazione e ricerca soluzione:
+	-ricerca individui giusti
+	-ricerca caratteristiche individuo perfetto
+	-ricerca individuo perfetto
+	-stabilizzazione del risultato
+
+
+conclusioni e opinioni su mathematica:
+	-tutto sommato non usa tanta ram quanto me ne aspettassi
+	-l'utilizzo di CPU e' notevole
+	-tempo perso in runtime e' guadagnato in implementazione
+
+possibili sviluppi:
+	-il problema si presta particolarmente alla parallelizzazione
+		step parallelizzabili: fitness, VALUTAZIONI , crossover
+	-compilazione delle funzioni piu' semplici: quelle di valutazione 
+		hanno il problema del passaggio della stack e del table
+	
+

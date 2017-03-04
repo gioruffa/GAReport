@@ -1,0 +1,33 @@
+il nostro problema
+
+il problema che ci proponiamo di risolvere e' all'apparenza semplice;
+immaginiamo di avere un numero di mattoncini su ognuno dei quali sia scritta una lettera e che l'insieme delle lettere formi una parola di senso compiuto.
+(nel nostro caso la parola sara' "universal")
+le lettere possono o essere inpilate verticalmente formando una stack oppure lasciate sul tavolo.
+l'obbiettivo del nostro GA e' di trovare un programma che data una configurazione iniziale delle nostre lettere sia in grado di ricostruire la parola cercata sulla stack.
+il programma ha a disposizione un numero limitato di operazione permesse elencate di seguito:
+
+CS[] l'attuale lettera in cima alla stack
+TB[] il blocco corretto in cima alla stack
+NN[] la prossima lettera necessaria per riempire la stack
+
+MTT[lettera] muovi una lettera dalla stack al tavolo
+MTS[lettera] mouvi una lettera dal tavolo alla stack
+
+DU[work,test] 
+EQ[expr1,expr2] esegui in ordine expr1 ed expr2 e poi controlla se sono uguali
+NOT[expr] se expr e' lisp nil ritorna vero, altrimenti falso
+
+i return status e i comportamenti delle funzioni sono trattati nella parte riguardante l'implementazione
+
+Modellizzazione del problema:
+la stack e il tavolo (da ora in avanti espresse anche come Table e Stack) sono 2 liste che possono essere modificate solo dalle funzioni MTT e MTS.
+la parola di riferimento (TargetWord) e' uguale a {l,a,s,e,r,v,i,n,u}; il fatto che la disposizione delle lettere sia al contrario e' semplicemente dovuta al fatto che  la stack viene letta dall'alto verso il basso e la prima lettera e' quella a contatto con il tavolo, in questo modo l'implementazione risulta di molto semplificata.
+
+un individuo sara' quindi un insieme di istruzioni del tipo MTT[TB[]] oppure DU[MTT[CS[]],NOT[NN]]
+
+per gli aspetti piu' tecnici riguardanti la valutazione dell'individuo e il crossover si veda la parte relativa all'implementazione dei vari moduli.
+
+la fitness sara' una funzione che esaminera' la stack formata dall'individuo per confrontarla con la parola finale ed eventualmente potra' considerare anche altre caratteristiche dell'individuo, come per esempio l'efficienza e il numero di operazioni che esegue.
+
+

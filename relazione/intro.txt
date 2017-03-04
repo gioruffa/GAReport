@@ -1,0 +1,19 @@
+introduzione agli AG 
+
+gli AG sono un particolare tipo di algoritmo che viene utilizzato per risolvere problemi il cui spazio delle soluzioni sia particolarmente vasto.
+essi permetto di campionare lo spazio delle soluzioni diminuendo la probabilita' di farmarsi su un minimo locale dello spazio delle soluzioni.
+
+il concetto fondamentale su cui si basano e' quello di considerare un programma come una sequenza di istrizuini assimilabili ad un genoma, quindi ricomponibili e intercambiabili.
+possiamo quindi considerare ogni programma come un individuo, ognuno dei quali si adattere meglio o peggio all'ambiente. la loro capacita' di riprodursi sara' proporzionale all'adattamento.
+
+e' quindi fondamentale definire cosa si intenda per "adattamento ambientale" o "fitness".
+la fitness altro non e' che un criterio con il quale assegnare un voto agli individui, per esempio la velocita' di esecuzione o il completamente di determinati obbiettivi.
+come vedremo la scelta della fitness e' fondamentale per giungere ad una buona soluzione del problema.
+
+possiamo quindi sinteetizzare le fasi tipiche di un GA:
+	-	generazione casuale di una popolazione (generare un numero fisso di programmi random)
+	-	valutazione degli individui tramite una fitness
+	-	riproduzione degli individui ("crossover") in funzione della fitness
+	-	mutazione
+
+
